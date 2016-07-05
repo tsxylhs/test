@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+	<script type="text/javascript" src="js/jqery-2.2.3.js" ></script>
+<script>
+	$(document).ready(function(){
+	
+		$("te").click(function(){
+				$ajax({
+			type:"GET",
+			url:"magServlet?pram=test",
+			dataType:"json"
+			
+		})
+		})
+	})
+	
+</script>
+<body>
+<button id="te">test</button>
+	
+</body>
+</html>

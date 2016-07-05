@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>管理员curd蛋糕</title>
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/curd.css" />
+<script type="text/javascript" src="js/curdAJAX.js"></script>
+<script type="text/javascript">
+window.onload=function(){
+var tianjia=document.getElementById("tianjia");
+   tianjia.addEventListener("click",()=>{
+	   var lg=document.getElementById("LG");
+	   lg.style.display="none";
+	   document.getElementById("tian").style.display="block";
+	   
+	   
+   })
+ // var btn=document.getElementsByName("showButtonDelete");
+ // alert( btn.id.value);
+}
+</script>
+</head>
+<body>
+	<div class="top" align="center">
+
+		<img src="img/1-110HGQ2004c.jpg" width="1444" height="260">
+	</div>
+	<div id="gl">
+
+		<h1 align="center">管理员蛋糕管理</h1>
+	</div>
+	<div align="center">
+		<button algn="center" id="tianjia">添加蛋糕</button>
+	</div>
+	<div id="LG" class="container">
+
+		<div class="row">
+			<div class="span8">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>编号</th>
+							<th>蛋糕名</th>
+							<th>尺寸</th>
+							<th>价格</th>
+							<th>修改/删除</th>
+						</tr>
+					</thead>
+					<tbody id="show">
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+		</div>
+		<div>
+			<div id="tian" style="display:none">
+			
+				<div>
+					<form class="form-horizontal" action="curd?pram=tianjia"
+						role="form" method="post">
+
+						<div class="form-group">
+							<label class="col-md-2 control-label"> 编号： </label>
+							<div class="col-md-10">
+								<input type="text" class="form-control" name="CakeId"
+									placeholder="请输入编号" />
+
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label"> 蛋糕名： </label>
+							<div class="col-md-10">
+								<input type="text" class="form-control" name="Cname"
+									placeholder="蛋糕名" />
+							</div>
+
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label"> 尺寸： </label>
+							<div class="col-md-10">
+								<input type="text" class="form-control" name="Csize"
+									placeholder="尺寸" />
+
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-2 control-label"> 价格: </label>
+							<div class="col-md-10">
+								<input type="date" name="Cprice" class="form-control" />
+
+							</div>
+
+						</div>
+								<div class="form-group">
+												<label class="col-md-2 control-label"> 类型: </label>
+												<div class="col-md-10">
+													<input type="date" name="Ctype" class="form-control" />
+					
+												</div>
+					
+											</div>
+					
+
+
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									<label> <input type="submit" value="添加" />
+									 <input type=button value=刷新 onclick="location=location">
+									</label>
+								</div>
+
+							</div>
+
+						</div>
+
+					</form>
+				</div>
+				</div>
+				
+				                 <div id="xiugai" style="display:none">
+				                      
+									                      
+									                      <div>
+										<form class="form-horizontal" action="curd?pram=xiugai"
+											role="form" method="post">
+					
+											<div class="form-group">
+												<label class="col-md-2 control-label"> 编号： </label>
+												<div class="col-md-10">
+													<input type="text" class="form-control" name="CakeId" id="zh"
+														placeholder="请输入编号"  />
+					
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-md-2 control-label"> 蛋糕名： </label>
+												<div class="col-md-10">
+													<input type="text" class="form-control" name="Cname" id="Dname"
+														placeholder="蛋糕名" />
+												</div>
+					
+											</div>
+											<div class="form-group">
+												<label class="col-md-2 control-label"> 尺寸： </label>
+												<div class="col-md-10">
+													<input type="text" class="form-control" name="Csize" id="Dcc"
+														placeholder="尺寸" />
+					
+												</div>
+											</div>
+					
+											<div class="form-group">
+												<label class="col-md-2 control-label"> 价格: </label>
+												<div class="col-md-10">
+													<input type="date" name="Cprice" class="form-control" id="price"/>
+					
+												</div>
+					
+											</div>
+												<div class="form-group">
+												<label class="col-md-2 control-label"> 类型: </label>
+												<div class="col-md-10">
+													<input type="date" name="Ctype" class="form-control" id="Ctype"/>
+					
+												</div>
+					
+											</div>
+					
+					
+											<div class="form-group">
+												<div class="col-md-offset-2 col-md-10">
+													<div class="checkbox">
+														<label> <input type="submit" value="修改" /> 
+															 <input type=button value=刷新 onclick="location=location">
+														</label>
+													</div>
+					
+												</div>
+					
+											</div>
+					
+										</form>
+									</div>
+						
+				                      </div>
+</body>
+</html>

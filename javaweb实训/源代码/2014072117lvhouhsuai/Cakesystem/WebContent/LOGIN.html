@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<link rel="stylesheet" href="css/bootstrap.min.css" />
+      	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    	<script type="text/javascript" src="js/magservlet.js" ></script>
+        <title>JSP Page</title>
+    
+    </head>
+    <body>
+    		<div class="t" >
+			<h1 align="center">管理员/会员登录注册</h1>
+		</div>
+   <div class="container-fluid" align="center">
+	<div class="row-fluid">
+		<div class="span12">
+			<form class="form-horizontal"   action="mag.servlet?pram=login"  method="get"  role="form" >
+				<div class="control-group">
+					<select id="choose" name="choose">
+						<option value="vip" >会员</option>
+						<option value="adm">管理员</option>
+					</select>
+					</div>
+				
+				<div class="control-group">
+					<label class="control-label" for="inputEmail" name="zh">账号</label>
+					<div class="controls">
+						<input id="inputEmail" type="email" name="zh"/>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputPassword" name="psw">密码</label>
+					<div class="controls">
+						<input id="inputPassword" type="password" name="psw" />
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<label class="checkbox"><input type="checkbox" /> 记住我</label> 
+						<input id="btn1" type="button" value="登陆">
+						 </form>
+						 <button id="btn2" type="button">注册</button>
+						
+						</div>
+						</div>
+						
+			</div>
+				</div>
+			
+		
+	</div>
+ 	</body>
+ 	     <script type="text/javascript">
+          var choose=document.getElementById("choose");
+        	var btn   =document.getElementById("btn2");
+        	     btn.addEventListener("click",()=>{
+        	    	 if(choose.value=="vip"){
+        	    		 window.location.href="VIPCH.html";
+        	        	}
+        	        	else{
+        	        		window.location.href="MZC.html";
+        	        	}
+        	     })
+        	     var btn1=document.getElementById("btn1").addEventListener("click", ()=>{
+        	   	mag();
+        	    });
+        	     
+        	
+        </script>
+</html>>

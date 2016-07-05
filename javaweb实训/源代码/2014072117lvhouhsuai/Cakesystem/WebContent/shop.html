@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+    	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+    	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script type="text/javascript" src="js/jqery-2.2.3.js" ></script>
+        <title></title>
+      </script>
+	</head>
+	<body>
+	<div class="t" >
+			<h1 align="center">购买列表</h1>
+			
+		</div>
+		<div class="row">
+		<div class="span8">
+			<table class="table" align="center">
+				<thead>
+					<tr>
+						<th align="center">>
+							编号
+						</th>
+						<th>
+							蛋糕名
+						</th>
+						<th>
+							尺寸
+						</th>
+						<th>
+							价格
+						</th>
+						<th>
+							购买
+						</th>
+					</tr>
+				</thead>
+				<tbody id="shop">
+			
+				</tbody>
+			</table>
+		</div>
+	</div>
+	</body>
+	  <script type="text/javascript">
+         		var table=document.getElementById("shop");
+        		var pl=window.dialogArguments;
+		            row=table.insertRow(0);
+				    row.insertCell(0).appendChild(document.createTextNode(pl.cakeId));
+					row.insertCell(1).appendChild(document.createTextNode(pl.cakeName));
+					row.insertCell(2).appendChild(document.createTextNode(pl.cakeSize));
+					row.insertCell(3).appendChild(document.createTextNode(pl.cakeprice));
+					var btn1=document.createElement("input");
+					btn1.type="button";
+					btn1.name="shop";
+					btn1.id="btn_shop";
+					btn1.value="购买";
+					btn1.addEventListener("click",()=>{
+					    var r=confirm("是否确人购买");
+					    if(r=true){
+					    	window.showModalDialog("shop.html",pram,sFeature);
+					    }
+					    else{
+					    	window.location.href="index.html";
+					    }
+					},false);
+					var cell=row.insertCell(4);
+					cell.appendChild(btn1);
+       
+        </script>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>蛋糕店首页</title>
+		
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<script type="text/javascript" src="js/inittable.js" ></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+	<script type="text/javascript" src="js/magservlet.js" ></script>
+	<script type="text/javascript">
+		window.onload = function(){
+		
+			var str = window.location.search;
+			//alert(str.split('?')[1]);
+			var data =str.split('?')[2];
+			if(str.split('?')[1]=="vip"){
+				alert(str.split('?')[2]);
+			//	var q=document.getElementById("tihuan").style.display='';
+			var p=document.getElementById("tihuan");//.innerHTML=str.split('?')[2];
+			p.insertAdjacentHTML("beforeEnd","<h6 >"+str.split('?')[2]+"</h6>")
+			var p1=document.getElementById("huiyuan").style.display="none";
+
+			}
+			else{
+				var p=document.getElementById("tihuan");
+				p.insertAdjacentHTML("beforeEnd","<h6 >未登录</h6>")
+			}
+		
+			if(str.split('?')[1]=="adm"){
+				var p=document.getElementById("ti");//.innerHTML=str.split('?')[2];;
+				
+				p.insertAdjacentHTML("beforeEnd","<h6 >"+str.split('?')[2]+"</h6>")
+				var p1=document.getElementById("gly").style.display="none";
+			}
+			else{
+			
+					var p=document.getElementById("ti");
+				p.insertAdjacentHTML("beforeEnd","<h6 >未登录</h6>")
+			}
+			var magess=document.getElementById("Magess");
+			magess.addEventListener("click" ,()=>{
+				window.location.href="vipxinx.html?"+data;
+			})
+		}
+		
+	</script>
+		<script type="text/javascript" src="js/jqery-2.2.3.js" ></script>
+	</head>
+	
+	<body>
+		<div class="top" align="center" position:absot >
+			<img src="img/-04-.jpg"  />
+		
+		</div>
+	<div id="LG" class="container">
+		
+	<div class="row">
+		<div class="span8">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							编号
+						</th>
+						<th>
+							蛋糕名
+						</th>
+						<th>
+							尺寸
+						</th>
+						<th>
+							价格
+						</th>
+						<th>
+							查看/购买
+						</th>
+					</tr>
+				</thead>
+				<tbody id="show">
+			
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+		
+	<div class="">
+		<div class="span4">
+			<div class="list-group">
+				<a class="list-group-item active" href="#">会员</a>
+				<div class="list-group-item" id="tihuan">
+				
+					<a href="LOGIN.html" id="huiyuan">会员登陆</a>
+					
+						<p>
+					<br /> <a id="Magess" href="#">查看会员信息</a>
+				</p>
+				<p>
+					<a id="jilu" href="#">会员购买记录</a>
+				</p>
+				</div>
+				</div>
+				
+				<a class="list-group-item active" href="#">管理员</a>
+				<div class="list-group-item" id="ti">
+					<a href="LOGIN.html" id="gly">管理员登陆</a>
+					<p>
+					<br /> <a id="DCURD" href="#" >管理员CURD蛋糕</a>
+				</p>
+				<p>
+					<a id="VCURD" href="#">管理员CURD会员</a>
+				</p> 
+				</div>
+			
+				<div class="list-group-item">
+					<span class="badge"></span><a>帮助</a>
+				</div> <a class="list-group-item active"><span class="badge"></span>帮助</a>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	</body>
+	<script type="text/javascript" src="js/magservlet.js" ></script>
+</html>
